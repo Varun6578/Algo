@@ -18,8 +18,9 @@ int lowerBound(int arr[],int n,int key){
         int mid=lo+(hi-lo)/2;
         if(arr[mid]==key){
             ans=mid;
-            while(mid-1>=0 and arr[--mid]==key){
+            while(mid-1>0 and arr[mid]==key){
                 ans=mid;
+                --mid;
             }
             break;
         }
